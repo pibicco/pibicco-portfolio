@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ひびきの作品。デザイン、写真、映像などの制作物を紹介するポートフォリオです。" />
+    <title>ひびきの作品。</title>
+    <link rel="icon" type="image/png" href="./assets/pibicco-logo-black.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Yomogi&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-locked">
+    <div class="noise" aria-hidden="true"></div>
+
+    <div id="access-gate" class="access-gate" role="dialog" aria-modal="true" aria-labelledby="access-title">
+      <div class="kaonashi-transition" aria-hidden="true"><img src="./assets/kaonashi-gate.jpg" alt="" /></div>
+      <form id="access-form" class="access-panel">
+        <img class="access-logo" src="./assets/pibicco-logo-white.png" alt="" aria-hidden="true" />
+        <p class="eyebrow">PRIVATE PORTFOLIO</p>
+        <h1 id="access-title">パスワードを<br />入力してください</h1>
+        <label class="sr-only" for="access-password">パスワード</label>
+        <div class="access-input-row">
+          <input id="access-password" type="password" autocomplete="current-password" placeholder="PASSWORD" required />
+          <button type="submit" aria-label="パスワードを送信">→</button>
+        </div>
+        <p id="access-message" class="access-message" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="トップへ"><img src="./assets/pibicco-logo-white.png" alt="" aria-hidden="true" /><span>pibicco Design</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">メニュー</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow reveal">HIBIKI’S PORTFOLIO / 2026</p>
+        <h1 id="hero-title" class="hero-title reveal">
+          ひびきの<br />
+          作品。
+        </h1>
+        <div class="hero-bottom reveal">
+          <a class="circle-link" href="#works" aria-label="作品を見る">
+            <span>View<br />works</span><span class="arrow">↘</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="works" class="works section-wrap" aria-labelledby="works-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SELECTED WORKS</p>
+          <h2 id="works-title">制作したもの</h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal" data-date="2026-01-18">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/smile-marche-05-preview.png" alt="第5回スマイルマルシェのチラシ" />
+              <span class="work-number">01</span>
+            </div>
+            <div class="work-meta">
+              <h3>第5回 スマイルマルシェ</h3>
+              <p>Flyer / Event design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-01-28">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/trial-session-flyer-preview.png" alt="運動あそび教室やるきっず無料体験会のチラシ" />
+              <span class="work-number">02</span>
+            </div>
+            <div class="work-meta">
+              <h3>無料体験会 参加者募集</h3>
+              <p>Flyer / Graphic design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-02-19">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/kawauchi-fc-members-preview.png" alt="川内FCメンバー募集のチラシ" />
+              <span class="work-number">03</span>
+            </div>
+            <div class="work-meta">
+              <h3>川内FC メンバー募集</h3>
+              <p>Flyer / Sports design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-02-19">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/kawauchi-fc-trial-preview.png" alt="川内FCサッカー体験会のチラシ" />
+              <span class="work-number">04</span>
+            </div>
+            <div class="work-meta">
+              <h3>川内FC サッカー体験会</h3>
+              <p>Flyer / Event design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-07-09">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/kawauchi-fc-sota-shikishi-preview.png" alt="川内FCの卒団記念メッセージ色紙" />
+              <span class="work-number">05</span>
+            </div>
+            <div class="work-meta">
+              <h3>川内FC 卒団記念色紙</h3>
+              <p>Memorial board / Graphic design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-02-10">
+            <div class="work-visual flyer-visual sticker-visual">
+              <img src="./assets/yazawa-style-birthday-sticker-preview.png" alt="友人の誕生日に制作した矢沢風ステッカー" />
+              <span class="work-number">06</span>
+            </div>
+            <div class="work-meta">
+              <h3>矢沢風 バースデーステッカー</h3>
+              <p>Personal work / Sticker design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-09-17">
+            <div class="work-visual flyer-visual identity-visual">
+              <img src="./assets/hiroshi-kogyo-logo.png" alt="ひろし工業の水をモチーフにしたロゴ" />
+              <span class="work-number">07</span>
+            </div>
+            <div class="work-meta">
+              <h3>ひろし工業 ロゴ</h3>
+              <p>Logo / Brand identity</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-06-05">
+            <div class="work-visual flyer-visual identity-visual">
+              <img src="./assets/kawauchi-fc-hinata-keyholder-preview.png" alt="川内FCチームキーホルダーのデザイン" />
+              <span class="work-number">08</span>
+            </div>
+            <div class="work-meta">
+              <h3>川内FC チームキーホルダー</h3>
+              <p>Goods / Graphic design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2024-11-08">
+            <div class="work-visual flyer-visual collage-visual">
+              <img src="./assets/pta-bazaar/bazaar-flyer.png" alt="PTAバザーの案内チラシ" />
+              <img src="./assets/pta-bazaar/fun-box.png" alt="PTAバザーのお楽しみ抽選箱デザイン" />
+              <img src="./assets/pta-bazaar/juice-menu.png" alt="PTAバザーのジュース選択案内" />
+              <img src="./assets/pta-bazaar/price-list.jpg" alt="PTAバザーの販売値段表" />
+              <span class="work-number">09</span>
+            </div>
+            <div class="work-meta">
+              <h3>PTAバザー 制作ツール一式</h3>
+              <p>Event tools / Graphic design</p>
+              <span>2024</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-01-13">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/pta-community-event-preview.png" alt="ふれあい講演会の告知チラシ" />
+              <span class="work-number">10</span>
+            </div>
+            <div class="work-meta">
+              <h3>ふれあい講演会 告知チラシ</h3>
+              <p>PTA event / Flyer design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-04-01">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/aibin-flyer-preview.png" alt="株式会社aibinのSNS広告サポートチラシ" />
+              <span class="work-number">11</span>
+            </div>
+            <div class="work-meta">
+              <h3>株式会社aibin サービスチラシ</h3>
+              <p>Business flyer / Graphic design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-02-10">
+            <div class="work-visual flyer-visual mug-gallery">
+              <img class="mug-mockup" src="./assets/graduation-mug-mockup.png" alt="卒園記念マグカップ2種のモックアップ" />
+              <img src="./assets/graduation-mug-design-a.png" alt="令和7年度の卒園記念マグカップ元デザイン" />
+              <img src="./assets/graduation-mug-design-b.png" alt="令和5年度の卒園記念マグカップ元デザイン" />
+              <span class="work-number">12</span>
+            </div>
+            <div class="work-meta">
+              <h3>卒園記念マグカップ</h3>
+              <p>Commemorative goods / Graphic design</p>
+              <span>2023–25</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-10-20">
+            <div class="work-visual flyer-visual page-pair">
+              <div class="page-thumb"><img src="./assets/ramen-poster-jp-01.jpg" alt="麺屋エディション京都本店ポスター01" /><span>01</span></div>
+              <div class="page-thumb"><img src="./assets/ramen-poster-jp-02.jpg" alt="麺屋エディション京都本店ポスター02" /><span>02</span></div>
+              <span class="work-number">13</span>
+            </div>
+            <div class="work-meta">
+              <h3>麺屋エディション 店頭ポスター</h3>
+              <p>Food poster / Graphic design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-09-10">
+            <div class="work-visual flyer-visual page-pair">
+              <div class="page-thumb"><img src="./assets/ramen-menu-saiin-front.jpg" alt="麺屋エディション西院店メニューの表面" /><span>表</span></div>
+              <div class="page-thumb"><img src="./assets/ramen-menu-saiin-back.jpg" alt="麺屋エディション西院店メニューの裏面" /><span>裏</span></div>
+              <span class="work-number">14</span>
+            </div>
+            <div class="work-meta">
+              <h3>麺屋エディション 西院店メニュー</h3>
+              <p>Restaurant menu / Graphic design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-06-16">
+            <div class="work-visual flyer-visual page-pair">
+              <div class="page-thumb"><img src="./assets/ramen-menu-ogoto-front.jpg" alt="麺屋エディション雄琴店メニューの表面" /><span>表</span></div>
+              <div class="page-thumb"><img src="./assets/ramen-menu-ogoto-back.jpg" alt="麺屋エディション雄琴店メニューの裏面" /><span>裏</span></div>
+              <span class="work-number">15</span>
+            </div>
+            <div class="work-meta">
+              <h3>麺屋エディション 雄琴店メニュー</h3>
+              <p>Restaurant menu / Graphic design</p>
+              <span>2026</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2025-09-16">
+            <div class="work-visual flyer-visual">
+              <img src="./assets/ramen-shop-tapestry-preview.png" alt="麺屋エディションの店頭タペストリー" />
+              <span class="work-number">16</span>
+            </div>
+            <div class="work-meta">
+              <h3>麺屋エディション タペストリー</h3>
+              <p>Store display / Graphic design</p>
+              <span>2025</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-date="2026-06-22">
+            <a class="work-visual website-visual" href="https://buchiton.com/" target="_blank" rel="noreferrer" aria-label="Buchiton公式サイトを開く">
+              <img src="./assets/buchiton-website.png" alt="Buchiton公式サイトのトップページ" />
+              <span class="work-number">17</span>
+              <span class="website-visit">VISIT SITE ↗</span>
+            </a>
+            <div class="work-meta">
+              <h3>Buchiton 公式Webサイト</h3>
+              <p>Web design / Multilingual website</p>
+              <span>2026</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="social-archive" class="social-archive section-wrap" aria-labelledby="social-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SOCIAL ARCHIVE</p>
+          <h2 id="social-title">Instagram<br />制作実績</h2>
+        </div>
+
+        <div class="instagram-grid">
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>01</span><h3>焼肉ぐりぐり家</h3></div>
+              <a href="https://www.instagram.com/p/DKQsBSPhGwD/" target="_blank" rel="noreferrer" aria-label="焼肉ぐりぐり家の投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKQsBSPhGwD/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DKQsBSPhGwD/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>02</span><h3>広島工業大学</h3></div>
+              <a href="https://www.instagram.com/p/DJB0V08hmRq/" target="_blank" rel="noreferrer" aria-label="広島工業大学の投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJB0V08hmRq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DJB0V08hmRq/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>03</span><h3>広島工業大学</h3></div>
+              <a href="https://www.instagram.com/p/DJ1HdO2BKjd/" target="_blank" rel="noreferrer" aria-label="広島工業大学の投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJ1HdO2BKjd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DJ1HdO2BKjd/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>04</span><h3>エムケーグループ</h3></div>
+              <a href="https://www.instagram.com/p/DGiIrwQP8GP/" target="_blank" rel="noreferrer" aria-label="エムケーグループの投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGiIrwQP8GP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DGiIrwQP8GP/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>05</span><h3>呉電子計算センター</h3></div>
+              <a href="https://www.instagram.com/p/DGuzmo6xtPL/" target="_blank" rel="noreferrer" aria-label="呉電子計算センターの投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGuzmo6xtPL/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DGuzmo6xtPL/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>06</span><h3>楓乃樹</h3></div>
+              <a href="https://www.instagram.com/p/DGDGw3TypKR/" target="_blank" rel="noreferrer" aria-label="楓乃樹の投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGDGw3TypKR/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DGDGw3TypKR/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+
+          <article class="instagram-project reveal">
+            <div class="instagram-project-head">
+              <div><span>07</span><h3>楓乃樹</h3></div>
+              <a href="https://www.instagram.com/p/DEy1i2mSJGd/" target="_blank" rel="noreferrer" aria-label="楓乃樹の投稿をInstagramで見る">↗</a>
+            </div>
+            <div class="instagram-embed-wrap">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DEy1i2mSJGd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                <a href="https://www.instagram.com/p/DEy1i2mSJGd/" target="_blank" rel="noreferrer">Instagramで投稿を見る</a>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <p class="eyebrow reveal">CONTACT</p>
+        <h2 id="contact-title" class="reveal">もっと見る、<br /><span>つながる。</span></h2>
+        <div class="contact-links reveal">
+          <a class="contact-link" href="https://www.instagram.com/pibicco_design/" target="_blank" rel="noreferrer"><span>Instagram</span><span>@pibicco_design ↗</span></a>
+          <a class="contact-link" href="https://lin.ee/5gl0oN8" target="_blank" rel="noreferrer"><span>LINE</span><span>友だち追加 ↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand"><img src="./assets/pibicco-logo-black.png" alt="" aria-hidden="true" />© <span id="year"></span> pibicco Design</p>
+      <div><a href="https://www.instagram.com/pibicco_design/" target="_blank" rel="noreferrer">Instagram</a><a href="https://lin.ee/5gl0oN8" target="_blank" rel="noreferrer">LINE</a><a href="#top">Back to top ↑</a></div>
+    </footer>
+
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
