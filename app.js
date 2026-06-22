@@ -20,7 +20,7 @@ const revealPortfolio = (animate = true) => {
   }
 
   accessGate.classList.add('is-unlocking');
-  window.setTimeout(() => { accessGate.hidden = true; }, 1800);
+  window.setTimeout(() => { accessGate.hidden = true; }, 1950);
 };
 
 if (sessionStorage.getItem('portfolio-access') === 'granted') {

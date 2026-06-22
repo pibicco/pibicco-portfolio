@@ -31,15 +31,15 @@ img { max-width: 100%; display: block; }
 .access-input-row button:hover { transform: translateX(4px); }
 .access-message { min-height: 1.4em; margin: 13px 0 0; color: #d8b6eb; font-size: .72rem; }
 .access-panel.is-error { animation: accessShake .35s ease; }
-.kaonashi-transition { position: absolute; z-index: 3; inset: 0; display: grid; place-items: center; opacity: 0; pointer-events: none; }
-.kaonashi-transition img { width: min(82vw, 1180px); max-width: none; image-rendering: auto; will-change: transform, opacity; }
+.kaonashi-transition { position: absolute; z-index: 3; inset: 0; display: grid; place-items: center; opacity: 0; pointer-events: none; contain: strict; transform: translateZ(0); }
+.kaonashi-transition img { width: min(82vw, 1180px); max-width: none; image-rendering: auto; transform-origin: center; backface-visibility: hidden; will-change: transform, opacity; }
 .access-gate.is-unlocking .access-panel { animation: accessPanelOut .22s ease forwards; }
-.access-gate.is-unlocking .kaonashi-transition { animation: kaonashiExit 1.75s cubic-bezier(.18,.72,.18,1) forwards; }
+.access-gate.is-unlocking .kaonashi-transition { animation: kaonashiExit 1.9s cubic-bezier(.22,.8,.25,1) forwards; }
 .access-gate.is-unlocking { animation: accessGateOut .7s ease 1.05s forwards; }
 
 @keyframes accessShake { 25% { transform: translateX(-8px); } 50% { transform: translateX(7px); } 75% { transform: translateX(-4px); } }
 @keyframes accessPanelOut { to { opacity: 0; transform: scale(.96); } }
-@keyframes kaonashiExit { 0% { opacity: 0; transform: scale(.46); } 14% { opacity: 1; transform: scale(.62); } 48% { opacity: 1; transform: scale(1); } 82% { opacity: 1; transform: scale(2.1); } 100% { opacity: 0; transform: scale(6); } }
+@keyframes kaonashiExit { 0% { opacity: 0; transform: translateZ(0) scale(.5); } 16% { opacity: 1; transform: translateZ(0) scale(.66); } 54% { opacity: 1; transform: translateZ(0) scale(1.1); } 87% { opacity: .96; transform: translateZ(0) scale(3); } 100% { opacity: 0; transform: translateZ(0) scale(4.4); } }
 @keyframes accessGateOut { to { opacity: 0; visibility: hidden; } }
 
 .image-lightbox { position: fixed; z-index: 900; inset: 0; display: grid; place-items: center; padding: 5vh 5vw; color: #fff; background: rgba(0,0,0,.94); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; }
