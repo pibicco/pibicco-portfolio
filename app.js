@@ -47,6 +47,53 @@ accessForm?.addEventListener('submit', async (event) => {
   accessPassword.select();
 });
 
+const lightbox = document.querySelector('#image-lightbox');
+const lightboxImage = lightbox?.querySelector('.lightbox-image');
+const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
+const lightboxClose = lightbox?.querySelector('.lightbox-close');
+
+const openLightbox = (image) => {
+  if (!lightbox || !lightboxImage) return;
+  lightboxImage.src = image.currentSrc || image.src;
+  lightboxImage.alt = image.alt;
+  if (lightboxCaption) lightboxCaption.textContent = image.alt;
+  lightbox.hidden = false;
+  document.body.classList.add('is-lightbox-open');
+  requestAnimationFrame(() => lightbox.classList.add('is-open'));
+  lightboxClose?.focus();
+};
+
+const closeLightbox = () => {
+  if (!lightbox) return;
+  lightbox.classList.remove('is-open');
+  document.body.classList.remove('is-lightbox-open');
+  window.setTimeout(() => {
+    lightbox.hidden = true;
+    if (lightboxImage) lightboxImage.src = '';
+  }, 250);
+};
+
+document.querySelectorAll('.work-visual:not(.website-visual) img').forEach((image) => {
+  image.tabIndex = 0;
+  image.setAttribute('role', 'button');
+  image.setAttribute('aria-label', `拡大表示: ${image.alt}`);
+  image.addEventListener('click', () => openLightbox(image));
+  image.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openLightbox(image);
+    }
+  });
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && lightbox?.classList.contains('is-open')) closeLightbox();
+});
+
 const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('.site-nav');
 

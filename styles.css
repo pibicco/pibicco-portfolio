@@ -12,6 +12,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
 body.is-locked { overflow: hidden; }
+body.is-lightbox-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
@@ -31,15 +32,25 @@ img { max-width: 100%; display: block; }
 .access-message { min-height: 1.4em; margin: 13px 0 0; color: #d8b6eb; font-size: .72rem; }
 .access-panel.is-error { animation: accessShake .35s ease; }
 .kaonashi-transition { position: absolute; z-index: 3; inset: 0; display: grid; place-items: center; opacity: 0; pointer-events: none; }
-.kaonashi-transition img { width: min(76vw, 920px); max-width: none; }
+.kaonashi-transition img { width: min(82vw, 1180px); max-width: none; image-rendering: auto; will-change: transform, opacity; }
 .access-gate.is-unlocking .access-panel { animation: accessPanelOut .22s ease forwards; }
 .access-gate.is-unlocking .kaonashi-transition { animation: kaonashiExit 1.75s cubic-bezier(.18,.72,.18,1) forwards; }
 .access-gate.is-unlocking { animation: accessGateOut .7s ease 1.05s forwards; }
 
 @keyframes accessShake { 25% { transform: translateX(-8px); } 50% { transform: translateX(7px); } 75% { transform: translateX(-4px); } }
 @keyframes accessPanelOut { to { opacity: 0; transform: scale(.96); } }
-@keyframes kaonashiExit { 0% { opacity: 0; transform: scale(.72); } 18% { opacity: 1; transform: scale(.9); } 68% { opacity: 1; transform: scale(1.42); } 100% { opacity: 0; transform: scale(2.3); filter: blur(5px); } }
+@keyframes kaonashiExit { 0% { opacity: 0; transform: scale(.46); } 14% { opacity: 1; transform: scale(.62); } 48% { opacity: 1; transform: scale(1); } 82% { opacity: 1; transform: scale(2.1); } 100% { opacity: 0; transform: scale(6); } }
 @keyframes accessGateOut { to { opacity: 0; visibility: hidden; } }
+
+.image-lightbox { position: fixed; z-index: 900; inset: 0; display: grid; place-items: center; padding: 5vh 5vw; color: #fff; background: rgba(0,0,0,.94); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; }
+.image-lightbox[hidden] { display: none; }
+.image-lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox-content { display: grid; justify-items: center; max-width: 100%; max-height: 100%; }
+.lightbox-image { max-width: 90vw; max-height: 82vh; object-fit: contain; box-shadow: 0 18px 70px rgba(0,0,0,.35); transform: scale(.97); transition: transform .3s ease; }
+.image-lightbox.is-open .lightbox-image { transform: scale(1); }
+.lightbox-caption { min-height: 1.3em; margin: 14px 0 0; color: rgba(255,255,255,.72); font-size: .75rem; text-align: center; }
+.lightbox-close { position: absolute; z-index: 2; top: 20px; right: 24px; width: 46px; height: 46px; padding: 0; color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; cursor: pointer; font: 300 1.8rem/1 var(--sans); }
+.work-visual:not(.website-visual) img { cursor: zoom-in; }
 
 .site-header { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; padding: 28px 3.5vw; display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 13px; color: #fff; font-size: .94rem; font-weight: 600; letter-spacing: .01em; text-shadow: 0 2px 3px rgba(12,31,51,.72), 0 6px 18px rgba(12,31,51,.48); }
